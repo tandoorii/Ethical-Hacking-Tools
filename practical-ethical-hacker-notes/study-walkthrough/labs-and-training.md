@@ -266,7 +266,7 @@ or
 
 or
 
-* `nmap -p 389 --script ldap-rootdse <target_IP>`
+* `nmap -p 389 --script ldap-rootdse <target_IP> =
 
 If LDAP port is filtered or closed, we should try to scan host using following parameters:
 
@@ -291,7 +291,7 @@ to checks hosts up: `nmap -sn IP/Subnet`
 
 Exploiting misconfigured NFS (port 2049)
 
-* `nmap -sV —p 2049 IP/Subnet`
+* `nmap -sV —p 21,2049 IP/Subnet`
 * `sudo apt-get install nfs-common`
 * `nmap -sV —script=nfs-showmount <Target_IP>`
 * check available mounts: `showmount -e <Target_IP>` -> we will see /home directory
